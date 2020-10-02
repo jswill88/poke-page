@@ -33,11 +33,12 @@ export const getPokemon = (url) => {
         dispatch(loading(true))
         
         let response = await axios.get(url)
-
+        setTimeout(() => {
           dispatch({
             type: 'GET_POKEMON',
             payload: { pokemonArray: response.data.results, next: response.data.next , previous: response.data.previous}
           })
+        },500)
       }
   }
 
