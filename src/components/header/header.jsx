@@ -19,8 +19,8 @@ function Header(){
       </Navbar.Brand>
 
       <Nav className="mr-auto">
-        <Link className='nav-link' to ='/'>Home</Link>
-        <Link className='nav-link' to='/pokedex'>Pokédex</Link>
+        <Link className='nav-link' to ='/poke-page/'>Home</Link>
+        <Link className='nav-link' to='/poke-page/pokedex'>Pokédex</Link>
       </Nav>
 
       </Navbar>
