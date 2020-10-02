@@ -2,7 +2,7 @@
   "name": "poke-page",
   "version": "0.1.0",
   "private": true,
-  "homepage": "401d37-redux-lab/poke-team",
+  "homepage": "/poke-team",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
