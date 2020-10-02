@@ -14,8 +14,8 @@ function App() {
         <Header />
         <main>
         <Switch>
-          <Route path='/' component={Home} exact />
-          <Route path='/pokedex' component={Pokedex} />
+          <Route path='/poke-page/' component={Home} exact />
+          <Route path='/poke-page/pokedex' component={Pokedex} />
         </Switch>
         </main>
         <Footer />

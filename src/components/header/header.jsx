@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom'
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
+import picture from '../../images/pokemon.png';
 
 function Header(){
   return(
@@ -10,7 +11,7 @@ function Header(){
     
       <Navbar.Brand>
       <img
-        src="../../../pokemon.png"
+        src={picture}
         width="30"
         height="30"
         className="d-inline-block align-top"
