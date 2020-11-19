@@ -31,14 +31,26 @@ export const getPokemon = (url) => {
       return async function (dispatch) {
 
         dispatch(loading(true))
-        
+
         let response = await axios.get(url)
+
+        let queue = []
+        response.data.results.forEach(obj => queue.push(() => axios.get(obj.url)))
+        
+        while(queue.length) {
+          const counter = queue.length - 1;
+          const pokemon = await queue.pop()()
+          response.data.results[counter].image = pokemon.data.sprites.front_default;
+        }
+
         setTimeout(() => {
           dispatch({
             type: 'GET_POKEMON',
             payload: { pokemonArray: response.data.results, next: response.data.next , previous: response.data.previous}
           })
         },500)
+
       }
   }
+
 

@@ -32,6 +32,7 @@ const CardComponent = props => {
                 <Card bg='dark' text='light' style={{ textAlign: 'center', margin: '1em' }}>
                   <Card.Body>
                     <Card.Title>{pokemon.name.toUpperCase()}</Card.Title>
+                    <img src={pokemon.image} alt={pokemon.name} />
                     <Button onClick={() => props.pokeball(pokemon)}>
                       Pokéball
               </Button>
